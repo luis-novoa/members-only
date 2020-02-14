@@ -35,4 +35,10 @@ class ApplicationController < ActionController::Base
     cookies.delete(:remember_digest)
     define_user(nil)
   end
+
+  def logged_user?
+    unless session[:user_id].nil?
+      redirect_to root_url
+    end
+  end
 end
