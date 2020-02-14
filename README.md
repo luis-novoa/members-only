@@ -57,7 +57,7 @@ If you have contributions to make, send me a message telling me about your ideas
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/davidauza-engineer/Ruby-on-Rails-Re-Former/issues).
+Feel free to check the [issues page](https://github.com/luis-novoa/members-only/issues).
 
 ## Show your support
 
@@ -65,4 +65,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](https://github.com/davidauza-engineer/Ruby-on-Rails-Re-Former/blob/feature-forms/LICENSE) licensed.
+This project is [MIT](https://github.com/luis-novoa/members-only/blob/authentication/LICENSE) licensed.
