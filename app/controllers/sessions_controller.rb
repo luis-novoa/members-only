@@ -6,6 +6,5 @@ class SessionsController < ApplicationController
     if @user.authenticate(params[:session][:password])
       log_in(@user)
     end
-    render 'sessions/new'
   end
 end
