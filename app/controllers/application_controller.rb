@@ -37,7 +37,7 @@ class ApplicationController < ActionController::Base
   end
 
   def logged_user?
-    unless session[:user_id].nil?
+    if session[:user_id].nil?
       redirect_to root_url
     end
   end

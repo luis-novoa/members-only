@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   before_create :assign_token
   has_secure_password
+  has_many :posts
 
   def assign_token
     self.remember_digest = User.encrypt(User.new_token)
