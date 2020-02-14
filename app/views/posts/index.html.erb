@@ -1,12 +1,13 @@
 <h1>All posts</h1>
 
 <ol>
-  <% @posts.each do |post| %>
+  <% @posts.each_with_index do |post, index| %>
     <li>Title: <%= post.title %><br><br>
       Body: <%= post.body %>
-      <% if cookies[:user_id] %>
-        <br><br>Author: <%= post.user_id.name %>
-      <% end %></li>
+    </li>
+    <% if cookies[:user_id] %>
+      <p>Authors: <%= @authors_names[index] %></p>
+    <% end %>
     <br><br>
   <% end %>
 </ol>

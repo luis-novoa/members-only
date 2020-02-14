@@ -15,7 +15,8 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-    @authors.map(@posts.user_id)
+    authors_ids = @posts.map { |post| post.user_id }
+    @authors_names = authors_ids.map { |author_id| User.find(author_id).name }
   end
 
   private
