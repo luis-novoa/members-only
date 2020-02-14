@@ -7,4 +7,8 @@ class SessionsController < ApplicationController
       log_in(@user)
     end
   end
+
+  def destroy
+    log_out
+  end
 end

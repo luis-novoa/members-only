@@ -18,4 +18,6 @@ class User < ApplicationRecord
       Digest::SHA1.hexdigest(string)
     end
   end
+
+
 end
