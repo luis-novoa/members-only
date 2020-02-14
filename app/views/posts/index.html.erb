@@ -1,5 +1,12 @@
 <h1>All posts</h1>
 
+<% if cookies[:user_id] %>
+  <%= link_to 'Create a new post!', new_post_path %>
+  <%= link_to 'Logout', logout_path, method: :delete%>
+<% else %>
+  <%= link_to 'Log in!', root_path %>
+<% end %>
+
 <ol>
   <% @posts.each_with_index do |post, index| %>
     <li>Title: <%= post.title %><br><br>
