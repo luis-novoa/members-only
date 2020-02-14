@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
-
-  before_action :logged_user?, only: [:new, :create]
+  before_action :logged_user?, only: %i[new create]
 
   def new
     @post = Post.new
@@ -15,7 +14,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-    authors_ids = @posts.map { |post| post.user_id }
+    authors_ids = @posts.map(&:user_id)
     @authors_names = authors_ids.map { |author_id| User.find(author_id).name }
   end
 

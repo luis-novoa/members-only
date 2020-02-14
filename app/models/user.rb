@@ -7,7 +7,6 @@ class User < ApplicationRecord
     self.remember_digest = User.encrypt(User.new_token)
   end
 
-
   class << self
     # Returns a random token.
     def new_token
@@ -19,6 +18,4 @@ class User < ApplicationRecord
       Digest::SHA1.hexdigest(string)
     end
   end
-
-
 end
