@@ -1,2 +1,12 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<h1>All posts</h1>
+
+<ol>
+  <% @posts.each do |post| %>
+    <li>Title: <%= post.title %><br><br>
+      Body: <%= post.body %>
+      <% if cookies[:user_id] %>
+        <br><br>Author: <%= post.user_id.name %>
+      <% end %></li>
+    <br><br>
+  <% end %>
+</ol>
