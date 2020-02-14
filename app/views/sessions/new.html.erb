@@ -1,6 +1,6 @@
 <h1>Log in</h1>
 
-<%= form_with(model: @user, local: true) do |f| %>
+<%= form_with(url: login_path, scope: :session, local: true) do |f| %>
 
   <%= f.label :email %> <br>
   <%= f.email_field :email %> <br> <br>
