@@ -2,9 +2,13 @@
 
 <% if cookies[:user_id] %>
   <%= link_to 'Create a new post!', new_post_path %>
+  <span>&nbsp;&nbsp;</span>
   <%= link_to 'Logout', logout_path, method: :delete%>
 <% else %>
   <%= link_to 'Log in!', root_path %>
+  <span>&nbsp;</span>
+  <span>&nbsp;</span>
+  <%= link_to 'Sign up!', signup_path %>
 <% end %>
 
 <ol>
