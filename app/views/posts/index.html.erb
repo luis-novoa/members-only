@@ -1,0 +1,24 @@
+<h1>All posts</h1>
+
+<% if cookies[:user_id] %>
+  <%= link_to 'Create a new post!', new_post_path %>
+  <span>&nbsp;&nbsp;</span>
+  <%= link_to 'Logout', logout_path, method: :delete%>
+<% else %>
+  <%= link_to 'Log in!', root_path %>
+  <span>&nbsp;</span>
+  <span>&nbsp;</span>
+  <%= link_to 'Sign up!', signup_path %>
+<% end %>
+
+<ol>
+  <% @posts.each_with_index do |post, index| %>
+    <li>Title: <%= post.title %><br><br>
+      Body: <%= post.body %>
+    </li>
+    <% if cookies[:user_id] %>
+      <p>Authors: <%= @authors_names[index] %></p>
+    <% end %>
+    <br><br>
+  <% end %>
+</ol>
